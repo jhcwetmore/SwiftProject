@@ -11,12 +11,18 @@ import UIKit
 class ViewController: UIViewController {
     var buttonCount = 0
     @IBOutlet weak var myLabel: UILabel!
+    
+    @IBOutlet weak var topInput: UITextField!
+    
+    @IBOutlet weak var bottomInput: UITextField!
+    
+    
+    
     @IBAction func myButtonAction(_ sender: Any) {
-        buttonCount = buttonCount + 1
-        if buttonCount >= 10 {
-            view.backgroundColor = UIColor.red
-            myLabel.text = "Button count > 10"
-        }
+       
+       var sum = Double(topInput.text!)! + Double(bottomInput.text!)!
+        myLabel.text = String(sum)
+        
     //new comment
         
         
